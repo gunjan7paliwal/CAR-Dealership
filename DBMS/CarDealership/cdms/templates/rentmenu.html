@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <title>Sell Menu</title>
+        {% load static %}
+        <link rel=stylesheet href='{% static "sellmenu/stylemenu.css"%}'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+    <div class='topheader'><a href="{% url 'cdms:home' %}"><b>Car Dealership System</b></a></div>
+        <div class='menu'>Cars We Rent</div>
+        
+        <form class='details' method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type='submit' class='btn btn-primary' id='butn'>Submit</button>
+        </form>
+        
+            <div class="edit">
+                <table class="table table-bordered">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Vehicle Name</th>
+                            <th>Vehicle Type</th>
+                            <th>Vehicle Model</th>
+                            
+                            <th>Vehicle Cost</th>
+                            <th>Colour</th>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                            
+                        {% for car in cars %}
+                            
+                            <tr>
+                                <td>{{ car.vehid }}</td>
+                                <td>{{ car.vehname }}</td>
+                                <td>{{ car.vehtype }}</td>
+                                <td>{{ car.vehmodel }}</td>
+                                
+                                <td>{{ car.vehcost }}</td>
+                                <td>{{ car.colour }}</td>
+                            </tr>
+                            
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        
+            </div>
+            <a href="{% url 'cdms:rentdetail' %}"><button type="submit" class="login-button" style=" margin-left: 850px;
+    margin-top: 219px; font-size: 30px;  "><i class="fa fa-chevron-right"></i><li>RENT CAR</li></button></a>
+            </div>    
+        
+    </body>
+</html>

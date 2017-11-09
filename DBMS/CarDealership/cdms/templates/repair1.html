@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+	<link rel="stylesheet" type="text/css" href="style/mystyle.css">
+    <link rel="stylesheet" href="style.css">     
+    <title>HotWheels-Add New Car</title>
+    <!--<script>
+      $(document).ready(function() {
+        $("#datepicker").datepicker();
+      });
+      </script>
+    -->
+</head>
+<body>
+    <div >
+    <div class="container">
+        <form class="form-horizontal" action="" method="post" name="VehicleAddForm">
+         {% csrf_token %}
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend style="position:relative">Car Details</legend>
+        
+    <!-- Prepended text->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Car ID</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="vehid" class="form-control" placeholder="Enter Car ID" type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="f_name">Car Name</label>  
+      <div class="col-md-6">
+      <input id="f_name" name="vehname" type="text" placeholder="Enter Car Name" class="form-control input-md" required="">
+      <span class="help-block">Do not use any salutation</span>  
+      </div>
+    </div>
+
+       <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="f_name">Car Model</label>  
+            <div class="col-md-6">
+                <input id="f_name" name="vehmodel" type="text" placeholder="Enter Car Name" class="form-control input-md" required="">
+                <span class="help-block">Do not use any salutation</span>  
+            </div>
+        </div>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="f_name">Car Type</label>  
+            <div class="col-md-6">
+                <input id="f_name" name="vehtype" type="text" placeholder="Enter Car Name" class="form-control input-md" required="">
+                <span class="help-block">Do not use any salutation</span>  
+            </div>
+        </div>
+
+        <!-- Text input->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="f_name">Tax id</label>  
+            <div class="col-md-6">
+                <input id="f_name" name="taxid" type="text" placeholder="Enter Car Name" class="form-control input-md" required="">
+                
+            </div>
+        </div>
+
+        
+    <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Car Price</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="vehcost" class="form-control" placeholder="Enter Car Price" type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="dob">Enter Date </label>  
+      <div class="col-md-6">
+      <input id="dob" name="createdat" type="text" placeholder="YYYY-MM-DD" class="form-control input-md" required="">
+      </div>
+    </div>
+    
+      <div class="form-group">
+            <label class="col-md-4 control-label" for="f_name">Status</label>  
+            <div class="col-md-6">
+                <input id="status" name="status" type="text" placeholder="Enter Car Name" class="form-control input-md" required="">
+                
+            </div>
+        </div>
+   
+ <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Repair Cost </label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="repcost" class="form-control" placeholder="Enter Car Price" type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+
+    <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Rent Cost Per Day</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="rentcost_perday" class="form-control" placeholder="Enter Car Price" type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+
+   
+     <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Colour</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="colour" class="form-control" placeholder="Enter Car Price" type="text" required="">
+      
+    </div>
+
+   
+    <!-- Button (Double) -->
+     </div>
+        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      
+    </fieldset>
+    </form>
+    
+    </div>
+</body>
+</html>

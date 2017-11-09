@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
+    <link rel="stylesheet" type="text/css" href="style/slider.css">
+	<link rel="stylesheet" type="text/css" href="style/mystyle.css">
+    <link rel="stylesheet" href="style.css">     
+    <title>HotWheels-Rent</title>
+     <!-- 
+    <script>
+      $(document).ready(function() {
+        $("#datepicker").datepicker();
+      });
+      </script>
+     --> 
+</head>
+<body>
+    <div >
+    <div class="container">
+        <form class="form-horizontal" action="" method="post" name="CustomerForm">
+          {% csrf_token %}
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend><br><br><h1>Customer Details</h1><br><br></legend>
+        
+    <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Customer ID</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="custid" class="form-control" placeholder="Enter Customer ID" type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="f_name">Customer First Name</label>  
+      <div class="col-md-6">
+      <input id="f_name" name="fname" type="text" placeholder="Enter Customer First Name" class="form-control input-md" required="">
+      <span class="help-block">Do not use any salutation</span>  
+      </div>
+    </div>
+    
+
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_name">Customer Last Name</label>  
+      <div class="col-md-6">
+      <input id="m_name" name="lname" type="text" placeholder="Enter Customer Last Name" class="form-control input-md" required="">
+      <span class="help-block">Do not use any salutation </span>  
+      </div>
+    </div>
+    
+
+    <!-- Prepended text-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Customer Phone No.</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="contactno" class="form-control" placeholder="Enter Customer Phone No." type="text" required="">
+        </div>
+        <p class="help-block">Please enter as number</p>
+      </div>
+    </div>
+
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_name">E-mail ID</label>  
+      <div class="col-md-6">
+      <input id="m_name" name="emailid" type="text" placeholder="Enter E-mail ID" class="form-control input-md" required="">
+      <span class="help-block">Do not use any salutation </span>  
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="m_income">Password</label>
+      <div class="col-md-6">
+        <div class="input-group">
+          <input id="m_income" name="password" class="form-control" placeholder="Enter Customer Phone No." type="text" required="">
+        </div>
+        <p class="help-block">Please enter a strong password</p>
+      </div>
+    </div>
+
+ 
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="addr">Address</label>
+      <div class="col-md-6">                     
+        <textarea class="form-control" id="addr" name="address"></textarea>
+      </div>
+    </div>
+    
+<!--    <!-- Text input->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="pin">PIN</label>  
+      <div class="col-md-6">
+      <input id="pin" name="pincode" type="text" placeholder="Pincode" class="form-control input-md" required="">
+      <span class="help-block">Pincode</span>  
+      </div>
+    </div>
+   -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="pin">Gender</label>  
+      <div class="col-md-6">
+      <input id="pin" name="gender" type="text" placeholder="Pincode" class="form-control input-md" required="">
+      <span class="help-block">Male/Female/Transgender</span>  
+      </div>
+    </div>
+   
+
+    
+
+    <!-- Text input--
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="dob">Enter Current Time</label>  
+      <div class="col-md-6">
+      <input id="dob" name="lastlogin" type="text" placeholder="YYYY-MM-DD" class="form-control input-md" required="">
+      <span class="help-block"></span>  
+      </div>
+    </div>
+    
+    
+
+    
+    <!-- Button (Double) -->
+    <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+    
+      <div class="col-md-8">
+        <input type="reset" class="btn btn-primary btn-lg " id="reset" name="reset" value="Reset Form">
+        <input type="submit" class="btn btn-success btn-lg " id="submit" name="submitb" value="Submit Form" >
+          
+       </div>   
+      </div>
+      
+    </fieldset>
+    </form>
+    
+    </div>
+</body>
+</html>

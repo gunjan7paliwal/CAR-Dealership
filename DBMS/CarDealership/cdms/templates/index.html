@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Car Dealership Management System</title>
+    {% load static %}
+    <link rel=stylesheet href='{% static "admin_home/style.css" %}'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+    <div class='topheader' style="margin: 5%;"><b>Automated Car Dealership Management System</b></div>
+    {% if message %}
+    <div class="alert alert-danger fade in" ><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><span class="glyphicon glyphicon-remove"></span><strong>{{ message }}</strong></div>
+    {% endif %}
+
+    <div class="collapse navbar-collapse" id="upmenu" >
+            <ul class="nav navbar-nav" id="navbarontop">
+                <li class="active" ><a href="{% url 'cdms:home' %}">HOME</a> </li>
+                <li class="active" ><a href="{% url 'cdms:signin' %}">LOG OUT</a> </li>
+            </ul>
+    </div> 
+    <div class="collapse navbar-collapse" id="upmen" >
+            <ul class="nav navbar-nav" id="navbarontop">
+                
+            </ul>
+    </div>        
+    <div class="container-fluid">
+        <div class="col-sm-4">
+            <div class='box'>
+                <div class='subhead'><b>Selling Car</b></div>
+                {% load static %}
+                <img src='{% static "admin_home/sale.jpeg" %}'>
+                <a href="{% url 'cdms:sellmenu' %}"> <button type="button" class="btn btn-primary" >Sell</button></a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="col-sm-4">
+            <div class='box'>
+                <div class='subhead'><b>Car Rentals</b></div>
+                {% load static %}
+                <img src='{% static "admin_home/rent.jpeg" %}'>
+                <a href="{% url 'cdms:rentmenu' %}"><button type="button" class="btn btn-primary">Rent</button></a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class='box'>
+                <div class='subhead'><b>Vehicle Repair</b></div>
+                {% load static %}
+                <img src='{% static "admin_home/repair.png" %}'>
+                <a href="{% url 'cdms:addcar' %}"><button type="button" class="btn btn-primary">Repair</button></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <nav class="topnavbar navbar-default topnav" style="margin: 1.5%; ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed toggle-costume" data-toggle="collapse" data-target="#upmenu" aria-expanded="false">ADD CAR
+                    <span class="sr-only"> Toggle navigaion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="{% url 'cdms:addcar' %}" style="padding-left: 68%;" ><img src='{%  static "image/index.png" %}' alt="logo"></a>
+            </div>   
+        </div>
+
+
+    
+
+</body>
+    
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
+
+<body>
+	<form method="POST" >
+		{% csrf_token %}
+
+		<div class="login-group">
+			<h3>Vehicle ID</h3>
+			<div class="form-group">
+				<label for="reg_username" class="sr-only"></label>		
+				<input type="text" class="form-control" id="reg_username" name="vehid" placeholder="fname">
+			</div>
+			<br><h3>Vehicle Name</h3>
+            <div class="form-group">
+            	<label for="reg_username" class="sr-only"></label>
+            	<input type="text" class="form-control" id="reg_username" name="vehname" placeholder="Name of vehicle">
+          	</div>
+          	<br><h3>Vehicle Model</h3>
+          	<div class="form-group">
+            	<label for="reg_username" class="sr-only"></label>
+            	<input type="text" class="form-control" id="reg_username" name="vehmodel" placeholder="model">
+          	</div>
+          	<br><h3>Vehicle Type</h3>
+			<div class="form-group">
+				<label for="reg_password" class="sr-only"></label>
+				<input type="password" class="form-control" id="reg_password" name="vehtype" placeholder="type of vehicle">
+			</div>
+			<br><h3>Vehicle Cost</h3>
+			<div class="form-group">
+				<label for="reg_email" class="sr-only"></label>
+				<input type="text" class="form-control" id="reg_email" name="vehcost" placeholder="In rupees">
+			</div>
+
+			<br><h3>Status</h3>
+			<div class="form-group">
+				<label for="reg_fullname" class="sr-only"></label>
+				<input type="text" class="form-control" id="reg_fullname" name="status" placeholder="status">
+			</div>
+
+			<br><h3>Repcost</h3>
+			<div class="form-group">
+	            <label for="reg_fullname" class="sr-only"></label>
+    	        <input type="text" class="form-control" id="reg_fullname" name="repcost" placeholder="repair cost">
+        	</div>
+          	
+			<br><h3>Rent Cost</h3>
+			<div class="form-group">
+	            <label for="reg_fullname" class="sr-only"></label>
+    	        <input type="text" class="form-control" id="reg_fullname" name="rentcost_perday" placeholder="rent cost per day">
+        	</div>
+         <br><br>
+        </div>
+				<button type="submit" class="login-button">SUBMIT<i class="fa fa-chevron-right"></i></button>
+			</div>
+		
+		</form>
+</body>
